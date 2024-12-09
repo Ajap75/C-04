@@ -1,63 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:07:06 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:45:18 by antoinejour      ###   ########.fr       */
+/*   Created: 2024/12/09 10:57:55 by antoinejour       #+#    #+#             */
+/*   Updated: 2024/12/09 16:18:54 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/Animal.hpp"
-#include "../headers/WrongAnimal.hpp"
-#include "../headers/WrongCat.hpp"
-#include "../headers/Cat.hpp"
-#include "../headers/Dog.hpp"
+#include "Animal.hpp"
 
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main()
+class Dog : virtual public Animal
 {
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-i->makeSound(); //will output the cat sound!
-j->makeSound();
-meta->makeSound();
-std::cout << std::endl;
-Dog originalDog;
-Dog copyDog = originalDog; // Copy constructor
-copyDog = originalDog;
-delete meta;
-delete j;
-delete i;
+    protected :
 
-return 0;
-}
+    public :
 
+    Dog();
+    ~Dog();
+    Dog(const Dog& other);
+    Dog& operator = (const Dog& other);
 
-// int main()
-// {
-// const Animal* meta = new Animal();
-// const Animal* j = new Dog();
-// const WrongAnimal* i = new WrongCat();
-// std::cout << j->getType() << " " << std::endl;
-// std::cout << i->getType() << " " << std::endl;
-// i->makeSound(); //will output the cat sound!
-// j->makeSound();
-// meta->makeSound();
-// Dog originalDog;
-// Dog copyDog = originalDog; // Copy constructor
-// copyDog = originalDog;
-// delete meta;
-// delete j;
-// delete i;
+    /*method*/
+    void makeSound() const;
+};
 
-// return 0;
-// }
+#endif
 
 /*
 The `virtual` keyword in inheritance is crucial for enabling polymorphism in C++.
@@ -77,4 +50,4 @@ Here's why and how it works:
    Without `virtual`, the compiler would determine which function to call **at compile time**, 
    based on the type of the pointer or reference. This would result in **static dispatch**, 
    meaning the base class method is always called, even if the object is of the derived type.
-   */
+*/
