@@ -6,21 +6,25 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:39:37 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:34:02 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/09 18:05:54 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/Dog.hpp"
+#include "../headers/Brain.hpp"
+
 
 Dog::Dog() : Animal()
 {
     std::cout << GREEN << "Dog default constructor called" << RESET <<  std::endl;
     type = "Dog";
+    brain = new Brain();
     // Constructor body (if needed)
 };
 
 Dog::~Dog() // Dog::~Dog() should not have a base class destructor call in the initializer list. Just define it normally; the compiler will automatically call Animal's destructor.
 {
+    delete brain;
     std::cout << RED << "Dog default destructor called" << RESET <<  std::endl;
 }; 
 

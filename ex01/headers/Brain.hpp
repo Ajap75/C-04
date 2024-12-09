@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal_methods.cpp                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 11:21:59 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:04:20 by antoinejour      ###   ########.fr       */
+/*   Created: 2024/12/09 17:17:13 by antoinejour       #+#    #+#             */
+/*   Updated: 2024/12/09 17:50:43 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/WrongAnimal.hpp"
 
-void WrongAnimal::makeSound() const 
+#include "colors.hpp"
+#include "string"
+#include "iostream"
+
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
+
+class Brain
 {
-    std::cout << "Generic WrongAnimal sound" << std::endl;
+    protected :
+
+    std::string ideas[100];
+    
+    public :
+
+    Brain();
+    ~Brain();
+    Brain(const Brain& other);
+    Brain& operator = (const Brain& other);
+
+    /*method*/
 };
 
-std::string WrongAnimal::getType() const 
-{
-    return (this->type);
-};
+#endif

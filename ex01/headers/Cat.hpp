@@ -6,19 +6,23 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:57:53 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:18:50 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/09 18:05:15 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
+
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
 class Cat : virtual public Animal
 {
-    protected :
+    private :
 
+    class Brain *brain;
+   
     public :
 
     Cat();

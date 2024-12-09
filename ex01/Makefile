@@ -6,13 +6,13 @@
 #    By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 12:53:29 by anastruc          #+#    #+#              #
-#    Updated: 2024/12/09 16:36:25 by antoinejour      ###   ########.fr        #
+#    Updated: 2024/12/09 18:36:37 by antoinejour      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polymorhpisme
+NAME = Brain
 COMPIL = c++
-FLAGS =  -Wall -Werror -Wextra -std=c++98 -g3 -fPIC
+FLAGS =  -Wall -Werror -Wextra -std=c++98 -g3 -fPIC -fsanitize=address
 
 PINK = \033[1;35m
 BLUE = \033[1;36m
@@ -22,18 +22,15 @@ HEADER = headers/colors.hpp \
 		headers/Animal.hpp \
 		headers/Dog.hpp \
 		headers/Cat.hpp \
-		headers/WrongCat.hpp \
-		headers/WrongAnimal.hpp \
+		headers/Brain.hpp \
 
 SRCS =  Animal_constructors.cpp \
 		Animal_methods.cpp \
-		WrongAnimal_constructors.cpp \
-		WrongAnimal_methods.cpp \
 		Dog_constructors.cpp \
 		Dog_methods.cpp \
 		Cat_constructors.cpp \
 		Cat_methods.cpp \
-		WrongCat_constructors.cpp \
+		Brain_constructors.cpp \
         main.cpp \
 		
 
@@ -54,11 +51,11 @@ $(NAME) : $(OBJS)
 
 clean :
 	@rm -rf objs
-	@echo  "$(BLUE)\n  Polymorhpisme CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Brain CLEANED \n$(NC)"
 
 fclean : clean
 	@rm -rf $(NAME)
-	@echo  "$(BLUE)\n  Polymorhpisme FULLY CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Brain FULLY CLEANED \n$(NC)"
 
 leak :
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)
