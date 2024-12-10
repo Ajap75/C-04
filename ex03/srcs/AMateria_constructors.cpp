@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:11:56 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:58:32 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/10 17:00:48 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,3 @@
         }
         return(*this);
     }
-    
-    // /*member functions*/
-    // std::string const& getType() const; // return the materia type 
-    // virtual AMateria* clont () const = 0;
-    // virtual void use (ICharacter& target); 

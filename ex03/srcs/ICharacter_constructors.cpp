@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:35:27 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 14:00:16 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/10 15:15:20 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@
     ICharacter::~ICharacter() 
     {
         std::cout << RED << "ICharacter Default destructor called" << RESET << std::endl; 
-    }
-    ICharacter::ICharacter(std::string& type) : type(type)
-    {
-        std::cout << GREEN << "ICharacter constructor with param called" << RESET << std::endl;
     }
     ICharacter::ICharacter(const ICharacter& other) : type(other.type)
     {

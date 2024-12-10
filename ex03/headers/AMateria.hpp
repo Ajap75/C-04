@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:11:59 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:01:17 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/10 16:35:18 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "colors.hpp"
 #include "iostream"
 #include "ICharacter.hpp"
+#include "Character.hpp"
 
 
 #ifndef AMATERIA_HPP

@@ -1,48 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 12:22:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:47 by antoinejour      ###   ########.fr       */
+/*   Created: 2024/12/10 16:54:33 by antoinejour       #+#    #+#             */
+/*   Updated: 2024/12/10 17:18:54 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "AMateria.hpp"
 
 #include "string"
 #include "colors.hpp"
 #include "iostream"
+#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "AMateria.hpp"
+#include "IMAteriaSource.hpp"
 
+#ifndef MateriaSource_HPP
+#define MateriaSource_HPP
 
-#ifndef Ice_HPP
-#define Ice_HPP
-
-class Ice : virtual public AMateria
+class MateriaSource
 {
-    protected :
 
-    std::string type;
-    
+    protected : 
+
+    AMateria* inventory[4];
 
     public : 
 
     /*constructor*/
-    Ice();
-    virtual ~Ice();
-    Ice(std::string& type);
-    Ice(const Ice& other);
-    Ice& operator =(const Ice& other);
-    
-    /*member functions*/
-    std::string const& getType() const; // return the materia type 
-    Ice* clone () const override;
-    void use (ICharacter& target) override; 
+    MateriaSource();
+    MateriaSource(std::string& type);
+    MateriaSource(const MateriaSource& other);
+    MateriaSource& operator =(const MateriaSource& other);
+    ~MateriaSource();
+
+  
+    void learnMateria(AMateria*);
+    AMateria* createMateria(std::string const & type);
+
 };
-
-
-
-
 #endif

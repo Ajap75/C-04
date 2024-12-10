@@ -6,11 +6,11 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:22:02 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:25:43 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/10 17:01:54 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/AMateria.hpp"
+#include "AMateria.hpp"
 
 #include "string"
 #include "colors.hpp"

@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:27:09 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:06:57 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/10 16:26:20 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ std::string const& AMateria::getType() const
     return (type);
 };
 
-// void AMateria::use(ICharacter& target)
-// {
-//     std::cout << "use " << this->getType() << std::cout;
-// };
+void AMateria::use(ICharacter& target)
+{
+    std::cout << this->getType() << "use on" << target.getName() << std::endl;;
+};
