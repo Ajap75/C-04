@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:54:33 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:18:54 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:56:18 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include "ICharacter.hpp"
 #include "Character.hpp"
 #include "AMateria.hpp"
-#include "IMAteriaSource.hpp"
+#include "IMateriaSource.hpp"
 
-#ifndef MateriaSource_HPP
-#define MateriaSource_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 
     protected : 

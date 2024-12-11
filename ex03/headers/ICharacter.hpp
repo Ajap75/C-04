@@ -6,16 +6,18 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:38 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 15:14:00 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 15:03:19 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string"
 #include "colors.hpp"
 #include "iostream"
+#include "AMateria.hpp"
 
-#ifndef ICharacter_HPP
-#define ICharacter_HPP
+
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
 
 class ICharacter
 {
@@ -27,9 +29,6 @@ class ICharacter
     public : 
 
     /*constructor*/
-    ICharacter();
-    ICharacter(const ICharacter& other);
-    ICharacter& operator = (const ICharacter& other);
     virtual ~ICharacter();
     
     /*member function PURE VIRTUAL as Icharacter is an interface*/

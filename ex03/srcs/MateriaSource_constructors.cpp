@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSurce_constructors.cpp                      :+:      :+:    :+:   */
+/*   MateriaSource_constructors.cpp                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:05:18 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:18:39 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:55:17 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,6 @@
         i = 0;
         while (i < 4)
         {
-            inventory[i] = nullptr;
-            i++;
-        }
-    }
-
-
-    MateriaSource::MateriaSource(std::string& type)
-    {
-        std::cout << GREEN << "MateriaSource constructor with param called" << RESET << std::endl;
-        int i;
-        i = 0;
-        while (i < 4)
-        {
             if (inventory[i] != nullptr)
             {
                 delete(inventory[i]);
@@ -52,6 +39,23 @@
             i++;
         }
     }
+
+
+    // MateriaSource::MateriaSource(std::string& type)
+    // {
+    //     std::cout << GREEN << "MateriaSource constructor with param called" << RESET << std::endl;
+    //     int i;
+    //     i = 0;
+    //     while (i < 4)
+    //     {
+    //         if (inventory[i] != nullptr)
+    //         {
+    //             delete(inventory[i]);
+    //             inventory[i] = nullptr;
+    //         }
+    //         i++;
+    //     }
+    // }
 
 
     MateriaSource::MateriaSource(const MateriaSource& other)

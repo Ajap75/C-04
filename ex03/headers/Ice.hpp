@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:22:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:47 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:45:36 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include "iostream"
 
 
-#ifndef Ice_HPP
-#define Ice_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
 class Ice : virtual public AMateria
 {
@@ -38,8 +38,8 @@ class Ice : virtual public AMateria
     
     /*member functions*/
     std::string const& getType() const; // return the materia type 
-    Ice* clone () const override;
-    void use (ICharacter& target) override; 
+    Ice* clone () const ; // override
+    void use (ICharacter& target); // override
 };
 
 

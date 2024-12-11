@@ -6,12 +6,12 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:37:52 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:10:43 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 12:00:42 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/Character.hpp"
-#include "../headers/AMateria.hpp""
+#include "../headers/AMateria.hpp"
 
 std::string const & Character::getName() const
 {

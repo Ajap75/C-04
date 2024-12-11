@@ -6,32 +6,15 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:35:27 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 15:15:20 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 14:53:59 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../headers/ICharacter.hpp"
 
-    ICharacter::ICharacter()
-    {
-        std::cout << GREEN << "ICharacter Default constructor called" << RESET << std::endl; 
-    }
-
     ICharacter::~ICharacter() 
     {
         std::cout << RED << "ICharacter Default destructor called" << RESET << std::endl; 
     }
-    ICharacter::ICharacter(const ICharacter& other) : type(other.type)
-    {
-        std::cout << MAGENTA << "ICharacter copy constructor  called" << RESET << std::endl;
-    }
-    ICharacter&ICharacter:: operator =(const ICharacter& other)
-    {
-        std::cout << BLUE << "ICharacter assignation operator called" << RESET << std::endl;
-        if (this != &other)
-        {
-            type = other.type;
-        }
-        return(*this);
-    }
+  

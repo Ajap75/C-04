@@ -6,11 +6,13 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:31:55 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 16:10:04 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 14:41:27 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/Character.hpp"
+#include "../headers/AMateria.hpp"
+
 
 Character::Character()
 {

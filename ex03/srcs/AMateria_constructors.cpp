@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:11:56 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:00:48 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 15:01:01 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,4 @@
     AMateria::AMateria(std::string& type) : type(type)
     {
         std::cout << BLUE << "AMateria constructor with param called" << RESET << std::endl;
-    }
-    AMateria::AMateria(const AMateria& other) : type(other.type)
-    {
-        std::cout << MAGENTA << "AMateria copy constructor called" << RESET << std::endl;
-    }
-    AMateria&AMateria:: operator =(const AMateria& other)
-    {
-        if (this != &other)
-        {
-            type = other.type;
-        }
-        return(*this);
     }

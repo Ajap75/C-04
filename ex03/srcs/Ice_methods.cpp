@@ -6,15 +6,16 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:27:53 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:29:02 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:47:00 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/Ice.hpp"
+#include "../headers/ICharacter.hpp"
 
 void Ice::use (ICharacter& target)
 {
-    std::cout << "* shoots an ice bolt at" << getType() << " *" << std::endl;
+    std::cout << "* shoots an ice bolt at" << target.getName() << " *" << std::endl;
 };
 
 

@@ -6,19 +6,20 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:22:02 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:54 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:41:51 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-
 #include "string"
 #include "colors.hpp"
 #include "iostream"
 
 
-#ifndef Cure_HPP
-#define Cure_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
+
+class ICharacter;
 
 class Cure : virtual public AMateria
 {
@@ -38,8 +39,8 @@ class Cure : virtual public AMateria
     
     /*member functions*/
     std::string const& getType() const; // return the materia type 
-    Cure* clone () const override; 
-    void use (ICharacter& target) override; 
+    Cure* clone () const ;  // override
+    void use (ICharacter& target) ; //  override
 };
 
 

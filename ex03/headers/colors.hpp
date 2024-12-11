@@ -6,9 +6,13 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:30:21 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:30:28 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:21:38 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#ifndef COLORS_HPP
+#define COLORS_HPP
 
 #define RESET "\033[0m"          // Reset color
 #define RED "\033[31m"           // Red
@@ -16,3 +20,5 @@
 #define YELLOW "\033[33m"        // Yellow
 #define BLUE "\033[34m"          // Blue
 #define MAGENTA "\033[35m"       // Magenta
+
+#endif

@@ -6,11 +6,11 @@
 #    By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 12:53:29 by anastruc          #+#    #+#              #
-#    Updated: 2024/12/09 16:36:25 by antoinejour      ###   ########.fr        #
+#    Updated: 2024/12/11 13:58:45 by antoinejour      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polymorhpisme
+NAME = Interfaceecap
 COMPIL = c++
 FLAGS =  -Wall -Werror -Wextra -std=c++98 -g3 -fPIC
 
@@ -18,47 +18,55 @@ PINK = \033[1;35m
 BLUE = \033[1;36m
 NC = \033[0m
 
-HEADER = headers/colors.hpp \
-		headers/Animal.hpp \
-		headers/Dog.hpp \
-		headers/Cat.hpp \
-		headers/WrongCat.hpp \
-		headers/WrongAnimal.hpp \
+HEADER = AMateria.hpp \
+			Character.hpp \
+			colors.hpp \
+			Cure.hpp \
+			Ice.hpp \
+			ICharacter.hpp \
+			IMateriaSource.hpp \
+			MateriaSource.hpp \
 
-SRCS =  Animal_constructors.cpp \
-		Animal_methods.cpp \
-		WrongAnimal_constructors.cpp \
-		WrongAnimal_methods.cpp \
-		Dog_constructors.cpp \
-		Dog_methods.cpp \
-		Cat_constructors.cpp \
-		Cat_methods.cpp \
-		WrongCat_constructors.cpp \
-        main.cpp \
+SRCS = AMateria_constructors.cpp \
+		AMateria_methods.cpp \
+		Character_constructors.cpp \
+		Character_methods.cpp \
+		Cure_constructors.cpp \
+		Cure_methods.cpp \
+		Ice_constructors.cpp \
+		Ice_methods.cpp \
+		ICharacter_constructors.cpp \
+		IMateriaSource_constructors.cpp \
+		MateriaSource_constructors.cpp \
+		MateriaSource_Methods.cpp \
+		main.cpp \
 		
 
 PSRCS = $(addprefix srcs/, $(SRCS))
+
+PHEADERS = $(addprefix headers/, $(HEADER))
+
 
 OBJS = $(PSRCS:srcs/%.cpp=objs/%.o);
 
 all : $(NAME)
 
-objs/%.o: srcs/%.cpp $(HEADER)
+objs/%.o: srcs/%.cpp $(PHEADERS)
 		@mkdir -p objs
 		@$(COMPIL) $(FLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)
 		@$(COMPIL) $(FLAGS) -o $@ $(OBJS)
-		@echo "$(BLUE)\n  Prog COMPILED \n$(NC) "
+		@echo "$(BLUE)\n  Interface&Recap COMPILED \n$(NC) "
 
 
 clean :
 	@rm -rf objs
-	@echo  "$(BLUE)\n  Polymorhpisme CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Interface&Recap CLEANED \n$(NC)"
 
 fclean : clean
 	@rm -rf $(NAME)
-	@echo  "$(BLUE)\n  Polymorhpisme FULLY CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Interface&Recap FULLY CLEANED \n$(NC)"
 
 leak :
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)

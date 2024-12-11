@@ -6,7 +6,7 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:24:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 13:43:56 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 14:45:02 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@
     }
     Cure::Cure(const Cure& other): AMateria(other)
     {
-        std::cout << BLUE << "Cure copy constructor called" << RESET << std::endl;
+        type = other.type;
+        std::cout << MAGENTA << "Cure copy constructor called" << RESET << std::endl;
     }
     Cure&Cure:: operator =(const Cure& other)
     {

@@ -6,21 +6,22 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:15:40 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 17:02:10 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 13:41:20 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-#include "ICharacter.hpp"
 
 #include "string"
 #include "colors.hpp"
 #include "iostream"
+#include "ICharacter.hpp"
 
-#ifndef Character_HPP
-#define Character_HPP
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
-class Character
+class AMateria ;
+
+
+class Character : public ICharacter
 {
     protected :
 

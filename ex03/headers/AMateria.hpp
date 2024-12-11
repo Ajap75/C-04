@@ -6,15 +6,19 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:11:59 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 16:35:18 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/11 15:04:18 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string"
 #include "colors.hpp"
 #include "iostream"
-#include "ICharacter.hpp"
-#include "Character.hpp"
+
+class Character;
+class ICharacter;
+
+
+
 
 
 #ifndef AMATERIA_HPP
@@ -31,10 +35,8 @@ class AMateria
 
     /*constructor*/
     AMateria();
-    ~AMateria();
+    virtual~AMateria();
     AMateria(std::string& type);
-    AMateria(const AMateria& other);
-    AMateria& operator =(const AMateria& other);
     
     /*member functions*/
     std::string const& getType() const; // return the materia type 
