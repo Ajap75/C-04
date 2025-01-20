@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:15:40 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 13:41:20 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 12:54:27 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Character : public ICharacter
     Character& operator = (const Character& other);
     virtual ~Character();
     
-    /*member function PURE VIRTUAL as Icharacter is an interface*/
+    /*member function */
     std::string const & getName() const; // override
     void equip(AMateria* m); // override
     void unequip(int idx); // override
