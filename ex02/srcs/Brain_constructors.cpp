@@ -6,13 +6,12 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:16:58 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 17:14:27 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 18:25:52 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../headers/Brain.hpp"
-
 
 Brain::Brain() 
 {

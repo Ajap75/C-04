@@ -1,48 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 12:22:02 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 19:05:35 by anastruc         ###   ########.fr       */
+/*   Created: 2025/01/20 10:35:33 by anastruc          #+#    #+#             */
+/*   Updated: 2025/01/20 11:42:45 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
-#include "string"
 #include "colors.hpp"
+#include "string"
 #include "iostream"
 
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#ifndef CURE_HPP
-#define CURE_HPP
-
-class ICharacter;
-
-class Cure : virtual public AMateria
+class WrongAnimal
 {
-    protected :
-
+protected:
     std::string type;
-    
 
-    public : 
-
-    /*constructor*/
-    Cure();
-    virtual ~Cure();
-    Cure(std::string& type);
-    Cure(const Cure& other);
-    Cure& operator =(const Cure& other);
-    
-    /*member functions*/
-    Cure* clone () const ;  // override
-    void use (ICharacter& target) ; //  override
+public:
+    /* Constructor */
+    WrongAnimal();
+    virtual ~WrongAnimal();
+    WrongAnimal(const WrongAnimal &other);
+    WrongAnimal &operator=(const WrongAnimal &other);
+    /*Methods*/
+    void makeSound() const;
+    std::string getType() const;
 };
-
-
-
-
 #endif

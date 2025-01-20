@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:57:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 12:46:31 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:22:45 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Animal
     Animal(const Animal& other);
     Animal& operator =(const Animal& other);
 
-    /*Methods*/
+    /*Methods : Pure virtual function. No implementation in the .cpp only in the .cpp of the derived classes*/
     virtual void makeSound() const = 0;
     std::string  getType() const;
 };

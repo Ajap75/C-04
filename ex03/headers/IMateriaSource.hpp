@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:54:33 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 15:03:58 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 19:01:18 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class IMateriaSource
 {
      public : 
 
-    /*constructor*/
+    /*destructor*/
     virtual~IMateriaSource();
     
     /*PURE VIRTUAL FUNCTION (= 0): No implementation is needed in the base class.

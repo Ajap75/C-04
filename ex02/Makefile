@@ -6,7 +6,7 @@
 #    By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 12:53:29 by anastruc          #+#    #+#              #
-#    Updated: 2025/01/20 12:43:26 by anastruc         ###   ########.fr        #
+#    Updated: 2025/01/20 18:27:56 by anastruc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,12 @@ HEADER = headers/colors.hpp \
 		headers/Cat.hpp \
 		headers/WrongCat.hpp \
 		headers/WrongAnimal.hpp \
+		headers/Brain.hpp \
+
 
 SRCS =  Animal_constructors.cpp \
 		Animal_methods.cpp \
+		Brain_constructors.cpp \
 		WrongAnimal_constructors.cpp \
 		WrongAnimal_methods.cpp \
 		Dog_constructors.cpp \

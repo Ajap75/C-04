@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:07:06 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 12:41:55 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 18:54:47 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@ int main()
 // const Animal* meta = new Animal();
 const Animal* j = new Dog();
 const Animal* i = new Cat();
+class Dog l = Dog();
+class Dog k = Dog(l);
+std::cout << std::endl;
+k.makeSound(); // deepcopy 
+std::cout << "---------" << std::endl;
+std::cout << "---------" << std::endl;
+
 std::cout << j->getType() << " " << std::endl;
 std::cout << i->getType() << " " << std::endl;
 i->makeSound(); //will output the cat sound!

@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:51:15 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 15:28:15 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:20:57 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Cat::Cat(const Cat& other) : Animal(other)
     if (other.brain)
         this->brain = new Brain(*other.brain);
     else
-        this->brain = nullptr;
+        this->brain = NULL;
     // If Cat has its own data members, initialize them her
 };
 
@@ -48,12 +48,11 @@ Cat& Cat::operator =(const Cat& other)
     if (this != &other)
     {
         Animal::operator=(other);
-        delete (this->brain);
-        
-        if (other.brain)
+        delete (this->brain); // Always release existing resources (e.g., delete brain) before allocating new ones in the assignment operator.
+        if (other.brain) //     Handle cases where other.brain might be nullptr.
             this->brain = new Brain(*other.brain);
         else 
-            this->brain = nullptr; 
+            this->brain = NULL; 
     }
     return (*this);
 }

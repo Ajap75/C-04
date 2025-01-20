@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:22:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 13:45:36 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 19:05:43 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ class Ice : virtual public AMateria
     Ice& operator =(const Ice& other);
     
     /*member functions*/
-    std::string const& getType() const; // return the materia type 
     Ice* clone () const ; // override
     void use (ICharacter& target); // override
 };

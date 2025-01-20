@@ -6,18 +6,21 @@
 /*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:57:55 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 16:18:54 by antoinejour      ###   ########.fr       */
+/*   Updated: 2024/12/09 18:05:19 by antoinejour      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
 class Dog : virtual public Animal
 {
-    protected :
+    private :
+
+    class Brain *brain;
 
     public :
 

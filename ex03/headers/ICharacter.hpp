@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:38 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 14:05:24 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 19:01:25 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ICharacter
 
     public : 
 
-    /*constructor*/
+    /*destructor*/
     virtual ~ICharacter();
     
     /*member function PURE VIRTUAL as Icharacter is an interface*/

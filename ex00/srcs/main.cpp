@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 10:29:55 by anastruc          #+#    #+#             */
-/*   Updated: 2025/01/20 12:06:45 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 16:51:02 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,22 @@ int main()
         delete meta;
         delete j;
         delete i;
-        std::cout << std::endl;
 
     }
     {
+        std::cout << std::endl;
         const Animal *meta = new Animal();
         const Animal *j = new Dog();
         const WrongAnimal *i = new WrongCat();
         const WrongAnimal z = *i;
+        const WrongCat c = WrongCat();
+        std::cout << c.getType() << " " << std::endl;
         std::cout << z.getType() << " " << std::endl;
         std::cout << j->getType() << " " << std::endl;
-        std::cout << i->getType() << " " << std::endl;
-        i->makeSound(); // will output the cat sound!
+        std::cout << i->getType() << " " << std::endl;        std::cout << std::endl;
+        std::cout << std::endl;
+        c.makeSound(); // will output the wrongcat sound because the function is called on a WrongCat object!
+        i->makeSound();  // will output the wrongAnimal sound because the function is called on a WrongAnimal object(with no "virtual" Keyword for makesound in WrongAnimal declaration) !
         j->makeSound();
         meta->makeSound();
         z.makeSound();

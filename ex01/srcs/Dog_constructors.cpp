@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:39:37 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 15:34:05 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:13:52 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ Dog::Dog(const Dog& other) : Animal(other)
    and copying the contents from the original. This ensures that the 
    new object has its own independent 'brain' instance, preventing 
    shared ownership or accidental modifications. Cf comment bellow to create a deep copy*/
-    if (other.brain)
+    if (other.brain) //     Handle cases where other.brain might be nullptr.
         this->brain = new Brain(*other.brain);
     else 
-        this->brain = nullptr;
+        this->brain = NULL;
     // If Dog has its own data members, initialize them here
 };
 
@@ -50,11 +50,11 @@ Dog& Dog::operator= (const Dog& other)
     {
         Animal::operator = (other);
         if (this->brain)
-            delete (brain);
-        if (other.brain)
+            delete (brain); // Always release existing resources (e.g., delete brain) before allocating new ones in the assignment operator.
+        if (other.brain) //     Handle cases where other.brain might be nullptr.
             this->brain = new Brain(*other.brain);
         else
-            this->brain = nullptr;
+            this->brain = NULL;
         // If Dog has its own data members, copy them here
     }
     return (*this);

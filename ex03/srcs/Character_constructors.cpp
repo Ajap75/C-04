@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character_constructors.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:31:55 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 14:41:27 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 19:28:13 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,12 @@ Character::Character(const Character& other) : name(other.name)
     name = other.name;
     while(i < 4)
     {
-        delete(this->inventory[i]);
-        this->inventory[i] = other.inventory[i];
+        if (other.inventory[i])
+        {
+            this->inventory[i] = other.inventory[i]->clone();
+        }
+        else
+            this->inventory[i] = NULL;
         i++;
     }
 }
@@ -80,8 +84,12 @@ Character& Character:: operator =(const Character& other)
         name = other.name;
         while(i < 4)
         {
-            delete(this->inventory[i]);
-            this->inventory[i] = other.inventory[i];
+            if (this->inventory[i] != NULL)
+                delete(this->inventory[i]);
+            if (other.inventory[i] != NULL)
+                this->inventory[i] = other.inventory[i]->clone();
+            else
+                this->inventory[i] = NULL;
             i++;
         }
     }
