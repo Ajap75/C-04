@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:57:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 14:42:30 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:47:17 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,41 +17,38 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
-class Animal 
+class Animal
 {
-    protected :
-
+protected:
     std::string type;
 
-    public :
-    
-    /* Constructor */ 
+public:
+    /* Constructor */
     Animal();
     virtual ~Animal();
-    Animal(const Animal& other);
-    Animal& operator =(const Animal& other);
+    Animal(const Animal &other);
+    Animal &operator=(const Animal &other);
 
     /*Methods*/
     virtual void makeSound() const;
-    std::string  getType() const;
+    std::string getType() const;
 };
 
 #endif
 
-
 /*
-The `virtual` keyword for a destructor is essential in ensuring proper cleanup of 
+The `virtual` keyword for a destructor is essential in ensuring proper cleanup of
 objects in polymorphic class hierarchies. Here's why:
 
 1. **What Happens Without a Virtual Destructor?**
-   - If a base class destructor is not marked as `virtual`, deleting a derived class object 
+   - If a base class destructor is not marked as `virtual`, deleting a derived class object
      through a base class pointer will result in undefined behavior.
-   - Only the base class destructor is called, leaving the derived class's resources 
+   - Only the base class destructor is called, leaving the derived class's resources
      (e.g., dynamically allocated memory) unfreed, causing memory leaks.
 
 2. **How Does a Virtual Destructor Work?**
-   - When a destructor is declared `virtual` in the base class, it ensures that the correct 
-     destructor for the derived class is called, followed by the base class destructor. 
+   - When a destructor is declared `virtual` in the base class, it ensures that the correct
+     destructor for the derived class is called, followed by the base class destructor.
    - This process ensures that all resources of the derived and base classes are properly cleaned up.
 
 3. **Example Without a Virtual Destructor:**
@@ -75,4 +72,3 @@ objects in polymorphic class hierarchies. Here's why:
        delete obj; // Only calls Base destructor. Derived destructor is skipped.
        return 0;
    } */
-

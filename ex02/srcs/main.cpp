@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:07:06 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 10:43:48 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 12:41:55 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

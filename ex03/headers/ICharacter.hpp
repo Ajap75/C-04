@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:38 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 15:03:19 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 14:05:24 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@
 
 class ICharacter
 {
-    protected :
-
-    std::string type;
-    
+    protected :    
 
     public : 
 

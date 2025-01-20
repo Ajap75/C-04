@@ -6,11 +6,12 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:15:40 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 12:54:27 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/20 13:59:43 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string"
+#include "cstdio"
 #include "colors.hpp"
 #include "iostream"
 #include "ICharacter.hpp"

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:07:06 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/09 18:40:52 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 14:48:09 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,22 @@ int main()
 {
    const Animal* j = new Dog();
    const Animal* k = new Cat();
+
+   /* In this situation object slicing occurs. When you assign a derived object (like Dig) to a base class object (Animla), only the base part of derivde object is copied
+   Any additional data or behavior defined in Dog is lost in the copy */   
+   const Animal z = *j;
+   z.makeSound();
+
+   /*On the contrary, here a deep copy occured. To prevent slicing, use pointers or references and ensure the base class object has virtual methods where polymorphism is needed.*/
+   const Animal* y = j;
+   y->makeSound();
    delete j;//should not create a leak
-   delete k;
-  
+   delete k;  
+
+   Dog t;
+   Dog tmp = t;
+
+   
    int i;
 
    // Herd building

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:57:05 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/10 10:43:23 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 12:46:31 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

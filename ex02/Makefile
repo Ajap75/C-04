@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+         #
+#    By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 12:53:29 by anastruc          #+#    #+#              #
-#    Updated: 2024/12/09 16:36:25 by antoinejour      ###   ########.fr        #
+#    Updated: 2025/01/20 12:43:26 by anastruc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polymorhpisme
+NAME = Abstract
 COMPIL = c++
-FLAGS =  -Wall -Werror -Wextra -std=c++98 -g3 -fPIC
+FLAGS =  -Wall -Werror -Wextra -std=c++98
 
 PINK = \033[1;35m
 BLUE = \033[1;36m
@@ -54,11 +54,11 @@ $(NAME) : $(OBJS)
 
 clean :
 	@rm -rf objs
-	@echo  "$(BLUE)\n  Polymorhpisme CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Abstract CLEANED \n$(NC)"
 
 fclean : clean
 	@rm -rf $(NAME)
-	@echo  "$(BLUE)\n  Polymorhpisme FULLY CLEANED \n$(NC)"
+	@echo  "$(BLUE)\n  Abstract FULLY CLEANED \n$(NC)"
 
 leak :
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource_constructors.cpp                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:05:18 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 13:55:17 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/20 14:17:48 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,21 @@
     }
 
 
-    // MateriaSource::MateriaSource(std::string& type)
-    // {
-    //     std::cout << GREEN << "MateriaSource constructor with param called" << RESET << std::endl;
-    //     int i;
-    //     i = 0;
-    //     while (i < 4)
-    //     {
-    //         if (inventory[i] != nullptr)
-    //         {
-    //             delete(inventory[i]);
-    //             inventory[i] = nullptr;
-    //         }
-    //         i++;
-    //     }
-    // }
+    MateriaSource::MateriaSource(std::string& type)
+    {
+        std::cout << GREEN << "MateriaSource constructor with param called" << RESET << std::endl;
+        int i;
+        i = 0;
+        while (i < 4)
+        {
+            if (inventory[i] != nullptr)
+            {
+                delete(inventory[i]);
+                inventory[i] = nullptr;
+            }
+            i++;
+        }
+    }
 
 
     MateriaSource::MateriaSource(const MateriaSource& other)
