@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:11:59 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 12:47:15 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/22 10:01:20 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
     AMateria();
     virtual ~AMateria();
     AMateria(std::string &type);
+    AMateria(const AMateria& other);
+    AMateria& operator =(const AMateria& other);
+    
 
     /*member functions*/
     std::string const &getType() const; // return the materia type

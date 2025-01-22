@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:54:33 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 13:56:18 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/22 11:02:08 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ class MateriaSource : public IMateriaSource
 
     /*constructor*/
     MateriaSource();
-    MateriaSource(std::string& type);
     MateriaSource(const MateriaSource& other);
     MateriaSource& operator =(const MateriaSource& other);
     ~MateriaSource();

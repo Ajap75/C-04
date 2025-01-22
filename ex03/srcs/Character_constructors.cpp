@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:31:55 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/20 19:28:13 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/22 10:06:27 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Character::Character()
     i = 0;
     while (i < 4)
     {
-        inventory[i] = nullptr;
+        inventory[i] = NULL;
         i++;
     }
 }
@@ -33,7 +33,7 @@ Character::Character(std::string name) : name(name)
     i = 0;
     while (i < 4)
     {
-        inventory[i] = nullptr;
+        inventory[i] = NULL;
         i++;
     }
 }
@@ -45,10 +45,10 @@ Character::~Character()
     i = 0;
     while (i < 4)
     {
-        if (inventory[i] != nullptr)
+        if (inventory[i] != NULL)
         {
             delete(inventory[i]);
-            inventory[i] = nullptr;
+            inventory[i] = NULL;
         }
         i++;
     }
