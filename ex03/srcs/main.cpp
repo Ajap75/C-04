@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:30:21 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/22 12:44:57 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/22 15:19:47 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int main()
         IMateriaSource *src = new MateriaSource();
         std::cout << "-------\n"
                   << std::endl;
-
-        src->learnMateria(new Ice());
+        AMateria *ice = new Ice();
+        src->learnMateria(ice);
         std::cout << "-------\n"
                   << std::endl;
-
-        src->learnMateria(new Cure());
+        AMateria *cure = new Cure();
+        src->learnMateria(cure);
         std::cout << "-------\n"
                   << std::endl;
 
@@ -54,52 +54,69 @@ int main()
         ICharacter *bob = new Character("bob");
         me->use(0, *bob);
         me->use(1, *bob);
+        delete cure;
+        delete ice;
         delete bob;
         delete me;
         delete src;
+ 
     }
-    // {
-    //     IMateriaSource *src = new MateriaSource();
-    //     ICharacter *Hercule = new Character("Hercule");
-    //     ICharacter *Poseidon = new Character("Poseidon");
-    //     Hercule->use(0, *Poseidon);
-    //     std::cout << std::endl << RED << "TEST NO MORE SPACE\n" << RESET << std::endl;
-    //     src->learnMateria(new Cure());
-    //     src->learnMateria(new Cure());
-    //     src->learnMateria(new Cure());
-    //     src->learnMateria(new Ice());
-    //     src->learnMateria(new Ice());
-    //     std::cout << "-------" << std::endl;
-    //     std::cout << std::endl << RED << "TEST MATERIA NOT FOUND IN INVENTORY" << RESET << std::endl;
-    //     src->createMateria("NotExistingMateria");
-    //     std::cout << "-------" << std::endl;
-    //     std::cout << std::endl << RED << "TEST CHARACTER MAX INVENTORY / UNEXISTING MATERIA IN MATERIA SOURCE" << RESET << std::endl;
-    //     Poseidon->equip(src->createMateria("cure"));
-    //     Poseidon->equip(src->createMateria("ice"));
-    //     Poseidon->equip(src->createMateria("ice"));
-    //     Poseidon->equip(src->createMateria("NotExistingMateria"));
-    //     Poseidon->equip(src->createMateria("ice"));
-    //     Poseidon->equip(src->createMateria("ice"));
-    //     std::cout << "-------" << std::endl;
-    //     std::cout << std::endl << RED << "USE" << RESET << std::endl;
-    //     std::cout << "-------" << std::endl;
-    //     Poseidon->use(0, *Hercule);
-    //     Poseidon->use(5, *Hercule);
-    //     Poseidon->unequip(0);
-    //     Poseidon->use(0, *Hercule);
-        
-    //     std::cout << std::endl << RED << "UNEQUIP" << RESET << std::endl;
-    //     Poseidon->unequip(0);
-    //     Poseidon->unequip(1);
-    //     Poseidon->unequip(2);
-    //     Poseidon->unequip(3);
-    //     Poseidon->unequip(4);
-    //     Poseidon->unequip(-1);
+    {
+        IMateriaSource *src = new MateriaSource();
+        ICharacter *Hercule = new Character("Hercule");
+        ICharacter *Poseidon = new Character("Poseidon");
+        Hercule->use(0, *Poseidon);
+        std::cout << std::endl << RED << "TEST NO MORE SPACE\n" << RESET << std::endl;
+        AMateria *cure1 = new Cure();
+        AMateria *cure2 = new Cure();
+        AMateria *cure3 = new Cure();
+        AMateria *cure4 = new Cure();
+        AMateria *cure5 = new Cure();
+        AMateria *ice1= new Ice();
 
-    //     delete Poseidon;
-    //     delete src;
-    //     delete Hercule;
-    // }
+        src->learnMateria(cure1);
+        src->learnMateria(cure2);
+        src->learnMateria(cure3);
+        src->learnMateria(ice1);
+        src->learnMateria(cure4);
+        std::cout << "-------" << std::endl;
+        std::cout << std::endl << RED << "TEST MATERIA NOT FOUND IN INVENTORY" << RESET << std::endl;
+        src->createMateria("NotExistingMateria");
+        std::cout << "-------" << std::endl;
+        std::cout << std::endl << RED << "TEST CHARACTER MAX INVENTORY / UNEXISTING MATERIA IN MATERIA SOURCE" << RESET << std::endl;
+        Poseidon->equip(cure5);
+        Poseidon->equip(ice1);
+        Poseidon->equip(ice1);
+        Poseidon->equip(ice1);
+        Poseidon->equip(src->createMateria("NotExistingMateria"));
+        Poseidon->equip(cure5);
+        std::cout << "-------" << std::endl;
+        std::cout << std::endl << RED << "USE" << RESET << std::endl;
+        std::cout << "-------" << std::endl;
+        Poseidon->use(0, *Hercule);
+        Poseidon->use(5, *Hercule);
+        Poseidon->unequip(0);
+        Poseidon->use(0, *Hercule);
+        
+        std::cout << std::endl << RED << "UNEQUIP" << RESET << std::endl;
+        Poseidon->unequip(0);
+        Poseidon->unequip(1);
+        Poseidon->unequip(2);
+        Poseidon->unequip(3);
+        Poseidon->unequip(4);
+        Poseidon->unequip(-1);
+
+        delete Poseidon;
+        delete src;
+        delete Hercule;
+        delete cure1;
+        delete cure2;
+        delete cure3;
+        delete cure4;
+        delete cure5;
+        delete ice1;
+
+    }
     return 0;
 }
 

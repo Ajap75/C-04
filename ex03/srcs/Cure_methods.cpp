@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure_methods.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinejourdan-astruc <antoinejourdan-a    +#+  +:+       +#+        */
+/*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:28:13 by antoinejour       #+#    #+#             */
-/*   Updated: 2024/12/11 13:44:12 by antoinejour      ###   ########.fr       */
+/*   Updated: 2025/01/22 15:23:27 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

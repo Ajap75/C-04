@@ -6,13 +6,13 @@
 #    By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 12:53:29 by anastruc          #+#    #+#              #
-#    Updated: 2025/01/22 12:36:43 by anastruc         ###   ########.fr        #
+#    Updated: 2025/01/22 14:37:04 by anastruc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Interfaceecap
 COMPIL = c++
-FLAGS =  -Wall -Werror -Wextra -std=c++98
+FLAGS =  -Wall -Werror -Wextra -std=c++98 -g3
 
 PINK = \033[1;35m
 BLUE = \033[1;36m
